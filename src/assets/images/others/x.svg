@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.15" height="24" viewBox="0 0 24.15 24">
+  <g id="Group_673" data-name="Group 673" transform="translate(18480 -957)">
+    <g id="tick-price" transform="translate(-18480 957)">
+      <path id="Path_16814" data-name="Path 16814" d="M12,0A12,12,0,1,1,0,12,12,12,0,0,1,12,0Z" fill="#f84e77" opacity="0.305"/>
+      <path id="Path_16813" data-name="Path 16813" d="M7.643,15.049h0C9.922,10.063,27.762.437,27.762.437" transform="translate(-5.34 4)" fill="none" stroke="#f84e77" stroke-linecap="round" stroke-width="2.55" fill-rule="evenodd"/>
+      <path id="Path_16815" data-name="Path 16815" d="M7.643,11.786S16.708,2.236,23.422.437" transform="matrix(-0.259, -0.966, 0.966, -0.259, 9.649, 27.697)" fill="none" stroke="#f84e77" stroke-linecap="round" stroke-width="2.55" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

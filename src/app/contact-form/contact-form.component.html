@@ -1,0 +1,70 @@
+    
+    <form class="contact-form" [formGroup]="form" (ngSubmit)="format(form.value)">
+        <div class="form-group">
+            <label>Your Name</label>
+            <input formControlName="name" name="name" placeholder="Full Name" type="text" class="form-control has-style1" 
+                type="text">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input formControlName="email" name="email" type="email" placeholder="Company Email ID" class="form-control has-style1"
+                type="text">
+        </div>
+        <div class="form-group">
+            <label>Your Location</label>
+            <ng-select [items]="countries"
+            bindLabel="name"
+            bindValue="dialCode"
+            placeholder="Select Country"
+            [searchable]="true" 
+            [clearable]="true"
+            (change)="getValues()"
+            [(ngModel)]="selection"
+            [ngModelOptions]="{standalone: true}"
+            appendTo="body">
+            <ng-template ng-label-tmp let-item="item">
+                <img height="auto" width="20px" style="margin-right: 5px;" [src]="item.flag"/>
+                {{item.name}}
+            </ng-template>
+            <ng-template ng-option-tmp let-item="item" let-index="index">
+                <img height="auto" width="20px" style="margin-right: 5px;" [src]="item.flag"/>
+                {{item.name}}
+            </ng-template>
+        </ng-select>
+        </div>
+        <div class="form-group">
+            <label>Contact Number</label>
+            <div class="row">
+                <div class="col-lg-3" style="max-width: 30%;">
+                <input formControlName="countrycode" placeholder="+1" class="form-control has-style1" type="tel" readonly  [(ngModel)]="selection">
+                </div>
+                <div class="col-lg-9" style="width: auto;">
+                <input class="form-control has-style1" placeholder="Your Number" formControlName="phoneNumber">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>How can we help?</label>
+            <ng-select [items]="services"
+            bindLabel="name"
+            bindValue="name"
+            placeholder="Select Services"
+            [searchable]="true" 
+            [multiple]="true"
+            [clearable]="true"
+            (change)="getValues()"
+            [(ngModel)]="selectedService"
+            [ngModelOptions]="{standalone: true}"
+            appendTo="body"
+            >
+            
+        </ng-select>
+        </div>
+        <label>Tell us more about your project</label>
+        <textarea formControlName="details" name="textarea" class="textarea has-style1" placeholder="How can we help?"></textarea>
+        <div class="form-group">
+            <button class="btn btn-secondary btn-lg">
+                <span> Submit → </span>
+            </button>
+        </div>
+    </form>

@@ -1,0 +1,324 @@
+/* components > _Buttons.scss                                                    | coinkit */
+
+/*** TABLE OF CONTENTS
+======================================================
+    0/ Generale
+    1/ Button sizes
+`  2/ Button variations
+    3/ other buttons
+===================================================***/
+
+/* ====================================================
+- - - - - - - - - 0/ Generale
+=====================================================*/
+button {
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 100%;
+    white-space: nowrap;
+    border: none;
+
+
+    &:focus {
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        opacity: .8;
+    }
+
+    &:hover {
+        opacity: .9;
+        background: unset !important;
+    }
+}
+
+.btn {
+
+    cursor: pointer;
+    position: relative;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: $font-primary;
+    border-radius: 5px;
+    background-color: #17161A;
+    border: none;
+    color: #fff;
+    padding: 14px 18px;
+    min-height: 20px;
+    line-height: 20px;
+    border-radius: 4px;
+    transition:   .4s ease-in-out;
+    font-weight: 600;
+    text-decoration: none;
+    vertical-align: middle;
+    outline: 0;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+
+
+    ion-icon {
+        vertical-align: inherit;
+        padding: 0 0 0 .5rem;
+    }
+
+
+
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    &-round {
+        border-radius: 50rem;
+    }
+
+    &-outline {
+        border: solid 2px;
+        background: transparent !important;
+    }
+
+}
+
+.light-skin {
+    .btn {
+        color: $dark;
+    }
+}
+
+.footer-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    background: $primary;
+    color: $white;
+
+    @include sm {
+        position: relative;
+        width: 100%;
+        margin: auto 6px;
+        border-radius: 5px;
+
+
+    }
+
+}
+
+
+.btn-opacity {
+    background: rgba($primary, 0.1);
+    color: $primary;
+
+    &.btn-blue {
+        background: rgba(#563cc9, 0.1);
+        color: #563cc9;
+    }
+}
+
+.btn2 {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    background: $primary;
+    color: $white;
+
+    @include sm {
+        position: relative;
+        width: 95%;
+        margin: auto 1rem;
+
+
+    }
+}
+
+/* =====================================================
+- - - - - - - - - 1/ Button sizes
+======================================================*/
+.btn-sm {
+    padding: .3rem 1rem;
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+.btn-lg {
+    padding: .7rem 2rem;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.btn-grad1 {
+    background: $grad1;
+    color: white;
+
+    &:hover {
+        color: white;
+
+    }
+}
+
+/* ==================================================+===
+- - - - - - - - - 2/ Button variations
+=======================================================*/
+.btn-primary {
+    background: $primary;
+    color: $white;
+    border: solid 2px $primary;
+    transition:   .4s ease-in-out;
+
+
+
+    &.btn-sh {
+        box-shadow: 0 14px 35px -11px $primary;
+    }
+
+    &.btn-outline {
+        border: solid 2px $primary;
+        background: transparent !important;
+        color: $primary;
+
+    }
+
+    &.btn-outline-bottom {
+        border-bottom: solid 3px $primary;
+        background: transparent !important;
+        color: $primary !important;
+
+    }
+
+    &.btn-hover-line {
+        &:hover {
+            background: transparent;
+            border: solid 2px $primary;
+            color: $primary;
+
+        }
+
+    }
+
+    &:hover {
+        outline: none;
+        background: darken($primary, 2%) !important;
+        border: solid 2px $primary;
+
+    }
+}
+.btn-secondary {
+    background: $secondary;
+    color: $white;
+    border: solid 2px $secondary;
+    transition: .4s ease-in-out;
+
+    
+    &:hover {
+        background: darken($secondary, 10%)  !important ;
+        border: solid 2px darken($secondary, 10%)  !important;
+        color: $white;
+    }
+
+
+    &.btn-sh {
+        box-shadow: 0 14px 35px -11px $secondary;
+    }
+
+    &.btn-outline {
+        border: solid 2px $secondary;
+        background: transparent !important;
+        color: $secondary;
+
+    }
+
+    &.btn-outline-bottom {
+        border-bottom: solid 3px $secondary;
+        background: transparent !important;
+        color: $primary !important;
+
+    }
+
+    &.btn-hover-line {
+        &:hover {
+            background: transparent;
+            border: solid 2px $secondary;
+            color: $secondary;
+
+        }
+
+    }
+
+}
+
+.btn-white {
+    background: #fff;
+    color: $dark;
+
+    &.btn-outline {
+        color: white;
+        border: solid 2px white;
+    }
+    &:hover {
+        opacity: .8;
+    }
+
+
+}
+
+.btn-grad2 {
+    background: $grad2;
+    outline: none;
+    border: none;
+    color: white;
+
+}
+
+.btn-red {
+    background: $red;
+    color: $white;
+    border: solid 1px $red;
+}
+
+.btn-green {
+    background: $green;
+    color: $white;
+    border: solid 1px $green;
+}
+
+.btn-dark {
+    background: $dark;
+    color: $white;
+    border: solid 1px $dark;
+
+    &:hover {
+        color: $primary;
+        background: $dark;
+        border: solid 1px $dark;
+
+
+    }
+
+    &.btn-sh {
+        box-shadow: 0 14px 35px -11px $dark;
+    }
+
+    &.btn-outline {
+        border: solid 2px $dark;
+        background: transparent !important;
+        color: $dark;
+
+    }
+
+    &.btn-outline-bottom {
+        border-bottom: solid 3px $dark;
+        background: transparent !important;
+        color: $dark;
+    }
+
+}
+
+
+
+/* ==================================================+===
+- - - - - - - - - 3 / outher button
+=======================================================*/
