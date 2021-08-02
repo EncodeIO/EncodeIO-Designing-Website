@@ -12,13 +12,7 @@ export class DialogComponent{
 
   openModal() {
     var data = null;//call api
-    this.dialogService.openModal("Title1","Message Test", true, ()=>{
-      //confirmed
-      console.log('Yes');
-    }, ()=>{
-      //not confirmed
-      console.log('No');
-    });
+    this.dialogService.openModal("Title1","Message Test");
     // const dialogConfig = new MatDialogConfig();
 
     // dialogConfig.disableClose = true;

@@ -1,0 +1,20 @@
+<p>encodeio-blog works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let blog of blogData | paginate: { id: 'foo',
+        itemsPerPage: 1,
+        currentPage: 1,
+        totalItems: 7 }">
+        <td>
+            {{blog}}
+        </td>
+        </tr>
+    </tbody>
+</table>
+<pagination-controls id ="foo">
+</pagination-controls>

@@ -9,7 +9,7 @@ export class DialogService {
 
   constructor(public dialog: MatDialog) { }
 
-  openModal(title:string, message:string, IsSubmitSuccess: boolean, yes:Function, no:Function) {
+  openModal(title:string, message:string) {
     const dialogConfig = new MatDialogConfig();
 
     // dialogConfig.disableClose = true;
@@ -22,18 +22,18 @@ export class DialogService {
 
     const dialogRef = this.dialog.open(DialogTemplateComponent, dialogConfig);
 
-    dialogRef.afterClosed().subscribe((result: any) => {
-      if(result){
-        if(yes){
-          yes();
-        }
-      }else{
-        if(no){
-          no();
-        }
-      }
+    // dialogRef.afterClosed().subscribe((result: any) => {
+    //   if(result){
+    //     if(yes){
+    //       yes();
+    //     }
+    //   }else{
+    //     if(no){
+    //       no();
+    //     }
+    //   }
         
-    });
+    // });
   }
 
 

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -30,6 +31,8 @@ import { WebDesigningComponent } from './web-designing/web-designing.component';
 import { GraphicDesigningComponent } from './graphic-designing/graphic-designing.component';
 import { WebApplicationComponent } from './web-application/web-application.component';
 import { AppDevelopmentComponent } from './app-development/app-development.component';
+import { EncodeioBlogComponent } from './encodeio-blog/encodeio-blog.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
@@ -51,7 +54,8 @@ import { AppDevelopmentComponent } from './app-development/app-development.compo
     WebDesigningComponent,
     GraphicDesigningComponent,
     WebApplicationComponent,
-    AppDevelopmentComponent
+    AppDevelopmentComponent,
+    EncodeioBlogComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +66,7 @@ import { AppDevelopmentComponent } from './app-development/app-development.compo
     IonicModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatInputModule, MatDialogModule, MatButtonModule,
+    MatInputModule, MatDialogModule, MatButtonModule,NgxPaginationModule,HttpClientModule
   ],
   providers: [DialogService],
   bootstrap: [AppComponent],

@@ -10,6 +10,7 @@ import { WebDesigningComponent } from './web-designing/web-designing.component';
 import { GraphicDesigningComponent } from './graphic-designing/graphic-designing.component';
 import { WebApplicationComponent } from './web-application/web-application.component';
 import { AppDevelopmentComponent } from './app-development/app-development.component';
+import { EncodeioBlogComponent } from './encodeio-blog/encodeio-blog.component';
 
 
 
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path:'web-designing' , component:WebDesigningComponent},
   {path:'graphic-designing' ,component:GraphicDesigningComponent},
   {path:'web-application' ,component:WebApplicationComponent},
-  {path:'app-development' ,component:AppDevelopmentComponent}
+  {path:'app-development' ,component:AppDevelopmentComponent},
+  {path:'encodeio-blog' ,component:EncodeioBlogComponent}
 
 
 ];
